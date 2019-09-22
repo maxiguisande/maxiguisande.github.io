@@ -1,18 +1,24 @@
 const cacheActual = 'PWACacheV1';
 
 const recursosEstaticos = [
-    'assets/Hernan.jpg',
-    'assets/Maxi.jpg',
-    'assets/Julian.jpg',
-    'assets/indoor.svg',
-    'assets/pwa.png',
-    'css/estilos.css',
-    'css/icon.woff2',
-    'css/materialize.css',
-    'css/materialize.min.css',
-    'js/materialize.min.js',
-    'icons/512.png',
-    'icons/192.png'
+    'assets/img/Hernan.jpg',
+    'assets/img/Maxi.jpg',
+    'assets/img/Julian.jpg',
+    'assets/img/indoor.svg',
+    'assets/img/pwa.png',
+    'css/bootstrap.min.css',
+    'css/font.woff2',
+    'css/font.css',
+    'css/style.css',
+    'js/bootstrap.min.js',
+    'js/init.js',
+    'js/jquery-3.3.1.slim.min.js',
+    'js/popper.min.js',
+    'pages/hernan.html',
+    'pages/julian.html',
+    'pages/maxi.html',
+    'assets/icons/512.png',
+    'assets/icons/192.png'
 ];
 
 self.addEventListener('install', function(event) {
@@ -42,9 +48,6 @@ self.addEventListener('activate', function(event) {
         caches.keys().then(function(cacheNames) {
             return Promise.all(
                 cacheNames.filter(function(cacheName) {
-                    // Return true if you want to remove this cache,
-                    // but remember that caches are shared across
-                    // the whole origin
                 }).map(function(cacheName) {
                     return caches.delete(cacheName);
                 })

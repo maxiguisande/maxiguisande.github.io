@@ -3,12 +3,12 @@
     "name": "PWA - Maxi - Julian - Hernan",
     "background_color": "#B71C1C",
     "icons": [{
-            "src": "icons/192.png",
+            "src": "assets/icons/192.png",
             "type": "image/png",
             "sizes": "192x192"
         },
         {
-            "src": "icons/512.png",
+            "src": "assets/icons/512.png",
             "type": "image/png",
             "sizes": "512x512"
         }

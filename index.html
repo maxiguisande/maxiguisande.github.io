@@ -1,67 +1,104 @@
- <!DOCTYPE html>
-  <html>
-    <head>	
-	<link rel="manifest" href="manifest.json"> 
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-	  <link type="text/css" rel="stylesheet" href="css/estilos.css"  media="screen,projection"/>      
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" content="#1565C0"/>	    	
-    </head>
+<html lang="en">
 
-    <body>
-	<main>	
-	
-		  <nav>
-			<div class="nav-wrapper  blue darken-3 center">			  
-				<label class="titulo">&nbsp;&nbsp; UAI Mobile</label>								  
-			</div>
-		  </nav>
-		  
-		  <div class="container center">		  
-		        <div class="row"> 
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<ul class="collapsible">
-    <li>
-      <div class="collapsible-header"><label class="tituloItem">Integrantes</label></div>
-      <div class="collapsible-body">
-	  <span>
-		<p>
-		<a href="maxi.html">Guisande, Maximiliano</a><br/>
-		<a href="julian.html">Palmerio, Julian</a><br/>
-		<a href="hernan.html">Viavattene, Hernan</a><br/>
-		</p>
-	  </span></div>
-    </li>
-	<li>
-      <div class="collapsible-header"><label class="tituloItem">Trabajos Prácticos</label></div>
-      <div class="collapsible-body"><span>
-	  <p>
-	  <a href="indoor.html">TP 1 - Posicionamiento Indoor</a><br/>
-	  <a href="pwa.html">TP 2 - PWA</a><br/>
-		</p>
-	  </span></div>
-    </li>
-   
-  </ul>			
-	</div>            
-</div>        		      
-	<script type="text/javascript" src="js/materialize.min.js"></script>	  	  	  	  
-	   <script>
-	       document.addEventListener('DOMContentLoaded', function() {
-			var elems = document.querySelectorAll('.collapsible');
-			var instances = M.Collapsible.init(elems, '');
-		});
-	   if ('serviceWorker' in navigator)
-		   navigator.serviceWorker.register('sw.js');	
-		   		  
-	  </script>
-    </main>
-	 <footer>
-          <div class="footer-copyright  blue darken-3">
-            <div class="container">
-             	<label class="pie"> Maestr&iacute;a en Tecnolog&iacute;a Inform&aacute;tica</label>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link href="css/font.css" rel="stylesheet">
+
+  <title>PWA</title>
+</head>
+
+<body>
+  <!-- Image and text -->
+  <nav class="navbar navbar-dark bg-primary">
+    <span class="navbar-brand mb-0 h1 ">
+    </span>
+    <span class="navbar-brand mb-0 h1 ">
+      PWA - Progressive Web App
+    </span>
+    <span class="navbar-brand mb-0 h1 ">
+    </span>
+  </nav>
+
+
+
+  <div class="accordion p-5  container center" id="accordionExample">
+
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Integrantes
+          </button>
+        </h2>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+          <div class="list-group">
+            <a href="pages/maxi.html" class="list-group-item list-group-item-action">Maximiliano Guisande</a>
+            <a href="pages/julian.html" class="list-group-item list-group-item-action">Julian Palmerio</a>
+            <a href="pages/hernan.html" class="list-group-item list-group-item-action">Hernan Viavattene</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Trabajos Realizados
+          </button>
+        </h2>
+      </div>
+      <div class="row">
+
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+
+          <div class="row">
+
+            <div class="col-sm-6">
+              <div class="card-body">
+                <div class="card" style="width: 18rem;">
+                  <img src="assets/img/indoor.svg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Indoor Location</h5>
+                    <p class="card-text">En el TP N&uacute;mero 1 trabajamos sobre tecnolog&iacute;as de posicionamiento Indoor.
+                      Exploramos algunas alternativas utilizando tecnolog&iacute;as de uso extendido c&oacute;mo WiFi y Bluetooth.</p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div> 
-        </footer>
-	</body>
-  </html>
-        
+            <div class="col-sm-6">
+              <div class="card-body">
+                <div class="card" style="width: 18rem;">
+                  <img src="assets/img/PWA.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">PWA</h5>
+                    <p class="card-text">En el TP N&uacute;mero 1 trabajamos sobre tecnolog&iacute;as de posicionamiento Indoor.
+                      Exploramos algunas alternativas utilizando tecnolog&iacute;as de uso extendido c&oacute;mo WiFi y Bluetooth.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/init.js"></script>
+  <script src="js/jquery-3.3.1.slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

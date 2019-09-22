@@ -1,3 +1,3 @@
-$(document).ready(function(){
-    $('.collapsible').collapsible();
-  });
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+}
