@@ -1,4 +1,4 @@
-const cacheActual = 'PWACacheV1';
+const cacheActual = 'PWACacheV2';
 
 const recursosEstaticos = [
     'assets/img/Hernan.jpg',
