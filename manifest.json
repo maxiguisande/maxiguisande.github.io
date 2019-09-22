@@ -1,6 +1,6 @@
 {
-    "short_name": "UAI Mobile",
-    "name": "PWA - Maxi - Julian - Hernan",
+    "short_name": "UAI PWA",
+    "name": "PWA",
     "background_color": "#B71C1C",
     "icons": [{
             "src": "assets/icons/192.png",
@@ -13,6 +13,7 @@
             "sizes": "512x512"
         }
     ],
-    "start_url": "/index.html",
-    "display": "standalone"
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#007bff"
 }
