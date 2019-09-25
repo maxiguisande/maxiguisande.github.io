@@ -1,7 +1,8 @@
 {
-    "short_name": "UAI PWA",
-    "name": "PWA",
-    "background_color": "#B71C1C",
+    "short_name": "TP2",
+    "name": "TP2 - Grupo 1",
+    "background_color": "#0000ff",
+    "theme_color": "#0000ff",
     "icons": [{
             "src": "assets/icons/192.png",
             "type": "image/png",
@@ -14,6 +15,5 @@
         }
     ],
     "start_url": "index.html",
-    "display": "standalone",
-    "background_color": "#007bff"
+    "display": "standalone"
 }
