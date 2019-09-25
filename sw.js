@@ -17,6 +17,7 @@ const recursosEstaticos = [
     'pages/hernan.html',
     'pages/julian.html',
     'pages/maxi.html',
+    'pages/trabajos.html',
     'assets/icons/512.png',
     'assets/icons/192.png'
 ];
