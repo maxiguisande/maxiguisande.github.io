@@ -35,9 +35,13 @@
 		font-size:30px;
 	}
 	.colorNavText{
-		color: #ffffff !important;
+		color: #ffffff;
 	}
 
 	.colorNav{
-		background-color: #0000ff !important;
+		background-color: #0000ff;
+	}
+
+	.colorExpand{
+		color: #0000ff;
 	}
