@@ -34,6 +34,10 @@
 		font-weight:600;
 		font-size:30px;
 	}
-	.colorNav{
+	.colorNavText{
 		color: #ffffff !important;
+	}
+
+	.colorNav{
+		background-color: #0000ff !important;
 	}
