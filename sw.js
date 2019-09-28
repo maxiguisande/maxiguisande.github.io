@@ -11,7 +11,6 @@ const recursosEstaticos = [
     'css/estilos.css',
     'css/materialize.css',
     'css/materialize.min.css',
-    'js/bootstrap.min.js',
     'js/init.js',
     'js/materialize.js',
     'js/materialize.min.js',
