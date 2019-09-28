@@ -1,64 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="Description" content="TP2 - PWA">
+  <meta name="Description" content="TP2 - Grupo 1">
   <meta name="theme-color" content="#0000ff">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="manifest" href="../manifest.json">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/style.css">
   <link rel="icon" href="../assets/img/pwa.png">
-  <link href="../css/font.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="../css/estilos.css" media="screen,projection" />
 
   <title>TP2 - Grupo 1</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-dark colorNav">
-    <button type="button" class="btn colorNav colorNavText" onclick="goBack()"><i class="fa fa-fw fa-arrow-left"></i></button>
-    <span class="navbar-brand mb-0 h1 colorNavText">
-      TP2 - Grupo 1
-    </span>
-    <span class="navbar-brand mb-0 h1 ">
-    </span>
+  <nav>
+    <div class="nav-wrapper colorNav">
+      <button type="button" class="btn colorNav colorNavText material-icons" onclick="goBack()">arrow_back</button></li>
+      <label class="brand-logo titulo center">TP2 - Grupo 1</label>
+    </div>
   </nav>
 
   <div class="container">
     <div class="row">
-      <div class="col-sm-6">
-        <div class="card-body">
-          <div class="card">
-            <img src="../assets/img/indoor.svg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Indoor Location</h5>
-              <p class="card-text">En el TP N&uacute;mero 1 trabajamos sobre tecnolog&iacute;as de posicionamiento Indoor.
-                Exploramos algunas alternativas utilizando tecnolog&iacute;as de uso extendido c&oacute;mo WiFi y Bluetooth.</p>
-            </div>
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-image">
+            <img src="../assets/img/indoor.svg">
+            <span class="card-title">Indoor Location</span>
+          </div>
+          <div class="card-content">
+            <p class="card-text">En el TP N&uacute;mero 1 trabajamos sobre tecnolog&iacute;as de posicionamiento Indoor.
+              Exploramos algunas alternativas utilizando tecnolog&iacute;as de uso extendido c&oacute;mo WiFi y Bluetooth.</p>
           </div>
         </div>
       </div>
 
-      <div class="col-sm-6">
-        <div class="card-body">
-          <div class="card">
-            <img src="../assets/img/pwa.png" class="card-img-top" height="80%">
-            <div class="card-body">
-              <h5 class="card-title">PWA</h5>
-              <p class="card-text">En el TP N&uacute;mero 2 trabajamos con PWA.</p>
-            </div>
+
+      <div class="col s12 m6">
+        <div class="card">
+          <div class="card-image">
+            <img src="../assets/img/pwa.png">
+            <span class="card-title">PWA</span>
+          </div>
+          <div class="card-content">
+            <p class="card-text">En el TP N&uacute;mero 1 trabajamos sobre tecnolog&iacute;as de posicionamiento Indoor.
+              Exploramos algunas alternativas utilizando tecnolog&iacute;as de uso extendido c&oacute;mo WiFi y Bluetooth.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
   <script src="../js/init.js"></script>
-  <script src="../js/jquery-3.3.1.slim.min.js"></script>
-  <script src="../js/popper.min.js"></script>
-  <script src="../js/bootstrap.min.js"></script>
 </body>
 
 </html>

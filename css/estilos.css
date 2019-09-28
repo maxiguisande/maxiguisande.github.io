@@ -1,0 +1,110 @@
+ body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+ }
+
+ main {
+   flex: 1 0 auto;
+ }
+
+ .titulo {
+   font-size: 1.5rem;
+   color: white;
+   font-weight: bold;
+ }
+
+ .pie {
+   font-size: 0.8rem;
+   color: white;
+   font-weight: bold;
+ }
+
+ .tituloItem {
+   font-size: 1.2rem;
+   font-weight: bold;
+ }
+
+ .colorNav {
+   background-color: #0000FF;
+ }
+
+ .portfolio {
+   padding: 6%;
+   text-align: center;
+ }
+
+ .heading {
+   background: #fff;
+   padding: 1%;
+   text-align: left;
+   box-shadow: 0px 0px 4px 0px #545b62;
+ }
+
+ .heading img {
+   width: 10%;
+ }
+
+ .bio-info {
+   padding: 5%;
+   background: #fff;
+   box-shadow: 0px 0px 4px 0px #b0b3b7;
+ }
+
+ .name {
+   font-family: 'Charmonman', cursive;
+   font-weight: 600;
+ }
+
+ .bio-image {
+   text-align: center;
+ }
+
+ .bio-image img {
+   border-radius: 10%;
+ }
+
+ .bio-content {
+   text-align: left;
+ }
+
+ .bio-content p {
+   font-weight: 600;
+   font-size: 30px;
+ }
+
+ .colorNavText {
+   color: #ffffff;
+ }
+
+ .colorNav {
+   background-color: #0000ff;
+ }
+
+ .colorExpand {
+   color: #0000ff;
+ }
+
+ /* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../assets/icon.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}

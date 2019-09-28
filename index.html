@@ -1,74 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="Description" content="TP2 - PWA">
-  <meta name="theme-color" content="#0000ff">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="manifest" href="manifest.json">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="/manifest.json">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="css/estilos.css" media="screen,projection" />
   <link rel="icon" href="assets/img/pwa.png">
-  <link href="css/font.css" rel="stylesheet">
-
-  <title>TP2 - Grupo 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-  <!-- Image and text -->
-  <nav class="navbar navbar-dark colorNav">
-    <span class="navbar-brand mb-0 h1 ">
-    </span>
-    <span class="navbar-brand mb-0 h1 colorNavText">
-      TP2 - Grupo 1
-    </span>
-    <span class="navbar-brand mb-0 h1 ">
-    </span>
-  </nav>
-
-  <div class="accordion p-5  container center" id="accordionExample">
-    <div class="card">
-      <div class="card-header" id="headingTwo">
-        <h2 class="mb-0">
-          <button class="btn colorExpand collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Integrantes
-          </button>
-        </h2>
+  <main>
+    <nav>
+      <div class="nav-wrapper  colorNav center">
+        <label class="brand-logo titulo center">TP2 - Grupo 1</label>
       </div>
-      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-        <div class="card-body">
-          <div class="list-group">
-            <a href="pages/maxi.html" class="list-group-item list-group-item-action">Maximiliano Guisande</a>
-            <a href="pages/julian.html" class="list-group-item list-group-item-action">Julian Palmerio</a>
-            <a href="pages/hernan.html" class="list-group-item list-group-item-action">Hernan Viavattene</a>
-          </div>
-        </div>
+    </nav>
+
+    <div class="container center">
+      <div class="row">
+
+        <ul class="collapsible">
+          <li>
+            <div class="collapsible-header"><label class="tituloItem">Integrantes</label></div>
+            <div class="collapsible-body">
+              <span>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Foto</th>
+                      <th>Nombre y Apellido</th>
+                      <th>Email</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td><img src="assets/img/Maxi.jpg" alt="image" /></td>
+                      <td>Maximiliano Guisande</td>
+                      <td><a href="mailto:maxipg@gmail.com">Contacto</a></td>
+                    </tr>
+                    <tr>
+                      <td><img src="assets/img/Hernan.jpg" alt="image" /></td>
+                      <td>Hernan Viavattene</td>
+                      <td><a href="mailto:vhernan@gmail.com">Contacto</a></td>
+                    </tr>
+                    <tr>
+                      <td><img src="assets/img/Julian.jpg" alt="image" /></td>
+                      <td>Julian Palmerio</td>
+                      <td><a href="mailto:julianjavierpamerio@gmail.com">Contacto</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </span></div>
+          </li>
+          <li>
+            <div class="collapsible-header"><label class="tituloItem">
+                <a href="pages/trabajos.html" class="list-group-item list-group-item-action">Trabajos Realizados</a>
+              </label></div>
+
+          </li>
+
       </div>
     </div>
-
-    <div class="card">
-      <div class="card-header" id="headingThree">
-        <h2 class="mb-0">
-          <button class="btn colorExpand collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            <a href="pages/trabajos.html" class="colorExpand btn">Trabajos Realizados</a>
-          </button>
-        </h2>
-      </div>
-      <div class="row ">
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-        </div>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.collapsible');
+        var instances = M.Collapsible.init(elems, '');
+      });
+      if ('serviceWorker' in navigator)
+        navigator.serviceWorker.register('/sw.js');
+    </script>
+  </main>
+  <footer>
+    <div class="footer-copyright  colorNav darken-4">
+      <div class="container ">
+        <label class="pie"> Maestr&iacute;a en Tecnolog&iacute;a Inform&aacute;tica</label>
       </div>
     </div>
-  </div>
-
-
-  <script src="js/init.js"></script>
-  <script src="js/jquery-3.3.1.slim.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  </footer>
 </body>
 
 </html>
