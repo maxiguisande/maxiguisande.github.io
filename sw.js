@@ -1,5 +1,5 @@
 
-const cacheActual = 'UAIMobile-v2';
+const cacheActual = 'TP2Grupo1';
 
 const recursosEstaticos = [
     'assets/img/Hernan.jpg',
