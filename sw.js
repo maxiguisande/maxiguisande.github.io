@@ -40,6 +40,7 @@ self.addEventListener('fetch', function(event) {
   );
 });
 
+*/
 self.addEventListener("fetch", function(event) {
   event.respondWith(
     fetch(event.request).catch(function() {
@@ -47,7 +48,6 @@ self.addEventListener("fetch", function(event) {
     })
   );
 });
-*/
 
 self.addEventListener('activate', function(event) {
   var version = 'v4';
