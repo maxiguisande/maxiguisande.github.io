@@ -1,6 +1,6 @@
-const cacheActual = 'TP2Grupo1';
+const CACHENAME = 'TP2Grupo1-v1';
 
-const recursosEstaticos = [
+const FILES = [
   'assets/img/Hernan.jpg',
   'assets/img/Maxi.jpg',
   'assets/img/Julian.jpg',
@@ -21,13 +21,13 @@ const recursosEstaticos = [
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open(cacheActual).then(function(cache) {
-      return cache.addAll(recursosEstaticos);
+    caches.open(CACHENAME).then(function(cache) {
+      return cache.addAll(FILES);
     })
   );
 });
 
-
+/*
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request)
@@ -39,36 +39,28 @@ self.addEventListener('fetch', function(event) {
     })
   );
 });
+*/
+
+self.addEventListener("fetch", function(event) {
+  event.respondWith(
+    fetch(event.request).catch(function() {
+      return caches.match(event.request);
+    })
+  );
+});
 
 self.addEventListener('activate', function(event) {
+  var version = 'v1';
   event.waitUntil(
-    caches.keys().then(function(cacheNames) {
-      return Promise.all(
-        cacheNames.filter(function(cacheName) {
-          debugger;
-          if (cacheName !== cacheActual) {
-            return caches.delete(cacheName);
-          }
-        }).map(function(cacheName) {
-          debugger;
-          return caches.delete(cacheName);
-        })
-      );
-    })
+    caches.keys()
+      .then(cacheNames =>
+        Promise.all(
+          cacheNames
+            .map(c => c.split('-'))
+            .filter(c => c[0] === 'cachestore')
+            .filter(c => c[1] !== version)
+            .map(c => caches.delete(c.join('-')))
+        )
+      )
   );
 });
-/*
-self.addEventListener('activate', function(event) {
-  event.waitUntil(
-    caches.keys().then(function(cacheNames) {
-      return Promise.all(
-        cacheNames.map(function(cacheName) {
-          if (cacheName !== cacheActual) {
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
-  );
-});
-*/
