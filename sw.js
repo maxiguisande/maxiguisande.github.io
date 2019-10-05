@@ -1,4 +1,4 @@
-const CACHENAME = 'TP2Grupo1-v2';
+const CACHENAME = 'TP2Grupo1-v3';
 
 const FILES = [
   'assets/img/Hernan.jpg',
