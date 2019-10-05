@@ -44,6 +44,21 @@ self.addEventListener('activate', function(event) {
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
       return Promise.all(
+        cacheNames.filter(function(cacheName) {
+          debugger;
+        }).map(function(cacheName) {
+          debugger;
+          return caches.delete(cacheName);
+        })
+      );
+    })
+  );
+});
+/*
+self.addEventListener('activate', function(event) {
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
         cacheNames.map(function(cacheName) {
           if (cacheName !== cacheActual) {
             return caches.delete(cacheName);
@@ -53,3 +68,4 @@ self.addEventListener('activate', function(event) {
     })
   );
 });
+*/
