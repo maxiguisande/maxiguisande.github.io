@@ -53,14 +53,16 @@ self.addEventListener('activate', function(event) {
   var version = 'v4';
   event.waitUntil(
     caches.keys()
-      .then(cacheNames =>
-        Promise.all(
-          cacheNames
-            .map(c => c.split('-'))
-            .filter(c => c[0] === 'cachestore')
-            .filter(c => c[1] !== version)
-            .map(c => caches.delete(c.join('-')))
+    .then(cacheNames =>
+      Promise.all(
+        cacheNames
+        .map(c => c.split('-'))
+        .filter(c => c[0] === 'cachestore')
+        .filter(c => c[1] !== version)
+        .map(
+          c => caches.delete(c.join('-'))
         )
       )
+    )
   );
 });
