@@ -1,4 +1,4 @@
-const CACHENAME = "TP2Grupo1test";
+const CACHENAME = "TP2Grupo1tes2t";
 
 const FILES = [
   "assets/img/Hernan.jpg",
@@ -41,12 +41,13 @@ self.addEventListener('fetch', function(event) {
 
 self.addEventListener('activate', function(event) {
 
-  var cacheWhitelist = ['TP2Grupo1test'];
+  var cacheWhitelist = ['TP2Grupo1tes2t'];
 
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
       return Promise.all(
         cacheNames.map(function(cacheName) {
+          debugger;
           if (cacheWhitelist.indexOf(cacheName) === -1) {
             return caches.delete(cacheName);
           }
