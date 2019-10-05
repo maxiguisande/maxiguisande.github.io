@@ -45,7 +45,9 @@ self.addEventListener('activate', function(event) {
     caches.keys().then(function(cacheNames) {
       return Promise.all(
         cacheNames.filter(function(cacheName) {
-          debugger;
+          if (cacheName !== cacheActual) {
+            return caches.delete(cacheName);
+          }
         }).map(function(cacheName) {
           debugger;
           return caches.delete(cacheName);
