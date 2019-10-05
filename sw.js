@@ -48,7 +48,9 @@ self.addEventListener('activate', function(event) {
             return caches.delete(cacheName);
           }
         }).map(function(cacheName) {
-          return caches.delete(cacheName);
+          if (cacheNames !== CACHENAME) {
+            return caches.delete(cacheName);
+          }
         })
       );
     })
