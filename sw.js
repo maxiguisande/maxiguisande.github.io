@@ -1,4 +1,4 @@
-const CACHENAME = "TP2Grupo1-v5";
+const CACHENAME = "TP2Grupo1-v6";
 
 const FILES = [
   "assets/img/Hernan.jpg",
@@ -36,7 +36,7 @@ self.addEventListener("fetch", function(event) {
 });
 
 self.addEventListener("activate", function(event) {
-  var version = "v5";
+  var version = "v6";
   event.waitUntil(
     caches.keys()
     .then(cacheNames =>
