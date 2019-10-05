@@ -50,7 +50,7 @@ self.addEventListener("fetch", function(event) {
 */
 
 self.addEventListener('activate', function(event) {
-  var version = 'v1';
+  var version = 'v4';
   event.waitUntil(
     caches.keys()
       .then(cacheNames =>
