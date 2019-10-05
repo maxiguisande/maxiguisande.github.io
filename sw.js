@@ -1,4 +1,4 @@
-const cacheActual = 'TP2Grupo1v2-0510';
+const cacheActual = 'TP2Grupo1v2';
 
 const recursosEstaticos = [
   'assets/img/Hernan.jpg',
@@ -45,6 +45,7 @@ self.addEventListener('activate', function(event) {
     caches.keys().then(function(cacheNames) {
       return Promise.all(
         cacheNames.filter(function(cacheName) {
+          debugger;
           if (cacheName !== cacheActual) {
             return caches.delete(cacheName);
           }
