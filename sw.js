@@ -39,7 +39,6 @@ self.addEventListener('fetch', function(event) {
     })
   );
 });
-*/
 
 self.addEventListener("fetch", function(event) {
   event.respondWith(
@@ -48,6 +47,7 @@ self.addEventListener("fetch", function(event) {
     })
   );
 });
+*/
 
 self.addEventListener('activate', function(event) {
   var version = 'v1';
