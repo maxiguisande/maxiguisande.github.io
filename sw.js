@@ -1,4 +1,4 @@
-const cacheActual = 'TP2Grupo1v2';
+const cacheActual = 'TP2Grupo1v3';
 
 const recursosEstaticos = [
   'assets/img/Hernan.jpg',
