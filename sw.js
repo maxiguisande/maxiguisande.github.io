@@ -1,5 +1,5 @@
 
-const cacheActual = 'TP2Grupo1-05102019';
+const cacheActual = 'TP2Grupo1-05102019v2';
 
 const recursosEstaticos = [
     'assets/img/Hernan.jpg',
@@ -49,7 +49,7 @@ self.addEventListener('activate', function(event) {
         caches.keys().then(function(cacheNames) {
             return Promise.all(
                 cacheNames.filter(function(cacheName) {
-                  return true;
+                  return caches.delete(cacheName);
                 }).map(function(cacheName) {
                     return caches.delete(cacheName);
                 })
