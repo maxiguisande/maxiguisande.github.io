@@ -1,59 +1,53 @@
-
-const cacheActual = 'TP2Grupo1-05102019v2';
+const cacheActual = 'TP2Grupo1v2';
 
 const recursosEstaticos = [
-    'assets/img/Hernan.jpg',
-    'assets/img/Maxi.jpg',
-    'assets/img/Julian.jpg',
-    'assets/img/indoor.svg',
-    'assets/img/pwa.png',
-    'assets/icon.woff2',
-    'css/estilos.css',
-    'css/materialize.css',
-    'css/materialize.min.css',
-    'js/init.js',
-    'js/materialize.js',
-    'js/materialize.min.js',
-    'index.html',
-    'pages/trabajos.html',
-    'assets/icons/512.png',
-    'assets/icons/192.png'
+  'assets/img/Hernan.jpg',
+  'assets/img/Maxi.jpg',
+  'assets/img/Julian.jpg',
+  'assets/img/indoor.svg',
+  'assets/img/pwa.png',
+  'assets/icon.woff2',
+  'css/estilos.css',
+  'css/materialize.css',
+  'css/materialize.min.css',
+  'js/init.js',
+  'js/materialize.js',
+  'js/materialize.min.js',
+  'index.html',
+  'pages/trabajos.html',
+  'assets/icons/512.png',
+  'assets/icons/192.png'
 ];
 
-self.addEventListener('install', function(event)
-{
-  event.waitUntil
-  (
-    caches.open(cacheActual).then(function(cache)
-       {
-        return cache.addAll(recursosEstaticos);
-       })
+self.addEventListener('install', function(event) {
+  event.waitUntil(
+    caches.open(cacheActual).then(function(cache) {
+      return cache.addAll(recursosEstaticos);
+    })
   );
 });
 
 
-self.addEventListener('fetch', function (event) {
+self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request)
-      .then(function (response) {
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      })
+    .then(function(response) {
+      if (response) {
+        return response;
+      }
+      return fetch(event.request);
+    })
   );
 });
 
 self.addEventListener('activate', function(event) {
-    event.waitUntil(
-        caches.keys().then(function(cacheNames) {
-            return Promise.all(
-                cacheNames.filter(function(cacheName) {
-                  return caches.delete(cacheName);
-                }).map(function(cacheName) {
-                    return caches.delete(cacheName);
-                })
-            );
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.map(function(cacheName) {
+          return caches.delete(cacheName);
         })
-    );
+      );
+    })
+  );
 });
