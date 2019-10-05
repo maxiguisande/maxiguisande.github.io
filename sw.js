@@ -35,20 +35,18 @@ self.addEventListener("fetch", function(event) {
   );
 });
 
-self.addEventListener("activate", function(event) {
-  var version = "v6";
+self.addEventListener('activate', function(event) {
   event.waitUntil(
-    caches.keys()
-    .then(cacheNames =>
-      Promise.all(
-        cacheNames
-        .map(c => c.split("-"))
-        .filter(c => c[0] === "cachestore")
-        .filter(c => c[1] !== version)
-        .map(
-          c => caches.delete(c.join("-"))
-        )
-      )
-    )
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.filter(function(cacheName) {
+          if (cacheNames !== CACHENAME) {
+            return caches.delete(cacheName);
+          }
+        }).map(function(cacheName) {
+          return caches.delete(cacheName);
+        })
+      );
+    })
   );
 });
