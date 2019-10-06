@@ -39,16 +39,12 @@ self.addEventListener('fetch', function(event) {
   );
 });
 
-self.addEventListener('activate', function(event) {
-
-  var cacheWhitelist = ['TP2Grupo1tes2t'];
-
+self.addEventListener("activate", function(event) {
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
       return Promise.all(
         cacheNames.map(function(cacheName) {
-          debugger;
-          if (cacheWhitelist.indexOf(cacheName) === -1) {
+          if (CACHENAME !== cacheName) {
             return caches.delete(cacheName);
           }
         })
