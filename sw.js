@@ -1,4 +1,4 @@
-const CACHENAME = "TP2Grupo1-v4";
+const CACHENAME = "TP2Grupo1-v5";
 
 const FILES = [
   "assets/img/pwa.png",
@@ -39,18 +39,18 @@ self.addEventListener('fetch', function(event) {
   );
 });
 
-self.addEventListener("activate", function(event) {
-  event.waitUntil(
-    caches.keys().then(function(cacheNames) {
-      debugger;
-      return Promise.all(
-        cacheNames.map(function(cacheName) {
-          debugger;
-          if (CACHENAME !== cacheName) {
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
-  );
-});
+// self.addEventListener("activate", function(event) {
+//   event.waitUntil(
+//     caches.keys().then(function(cacheNames) {
+//       debugger;
+//       return Promise.all(
+//         cacheNames.map(function(cacheName) {
+//           debugger;
+//           if (CACHENAME !== cacheName) {
+//             return caches.delete(cacheName);
+//           }
+//         })
+//       );
+//     })
+//   );
+// });
