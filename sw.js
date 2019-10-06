@@ -1,11 +1,11 @@
-const CACHENAME = "TP2Grupo1-v3";
+const CACHENAME = "TP2Grupo1-v4";
 
 const FILES = [
+  "assets/img/pwa.png",
   "assets/img/Hernan.jpg",
   "assets/img/Maxi.jpg",
   "assets/img/Julian.jpg",
   "assets/img/indoor.svg",
-  "assets/img/pwa.png",
   "assets/icon.woff2",
   "css/estilos.css",
   "css/materialize.css",
