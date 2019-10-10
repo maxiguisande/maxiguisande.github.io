@@ -1,4 +1,4 @@
-const CACHENAME = "TP2Grupo1-v8";
+const CACHENAME = "TP2Grupo1-v9";
 
 const FILES = [
   "assets/img/pwa.png",
